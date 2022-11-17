@@ -22,11 +22,14 @@ class Cars
     #[ORM\Column(length: 255)]
     private ?string $Color = null;
 
+    #[ORM\Column]
+    private ?int $counter = null;
+
     public function getId(): ?int
     {
         return $this->id;
     }
-
+ 
     public function getName(): ?string
     {
         return $this->Name;
@@ -59,6 +62,18 @@ class Cars
     public function setColor(string $Color): self
     {
         $this->Color = $Color;
+
+        return $this;
+    }
+
+    public function getCounter(): ?int
+    {
+        return $this->counter;
+    }
+
+    public function setCounter(int $counter): self
+    {
+        $this->counter = $counter;
 
         return $this;
     }

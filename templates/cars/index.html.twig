@@ -9,12 +9,30 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h1>You have {{  cars_array|length }} cars</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/projects/my_app2/src/Controller/CarsController.php'|file_link(0) }}">src/Controller/CarsController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/projects/my_app2/templates/cars/index.html.twig'|file_link(0) }}">templates/cars/index.html.twig</a></code></li>
-    </ul>
+
+
+    {{form(button)}}
+
+
+  
+  
+    <ol>
+    {% for car in cars_array %}
+
+    <li> {{car.name}}  <br>
+        
+    {% endfor %}
+        
+    </ol>
+
+ {{ form(form)}}
+  
 </div>
+
+
+{% endblock %}
+{% block form %}
+
 {% endblock %}

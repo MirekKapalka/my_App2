@@ -8,13 +8,20 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
 
-    This friendly message is coming from:
+
+<div class="example-wrapper">
+   
+
+ 
     <ul>
-        Created new car with name {{ name }} year {{year}}  and color  {{ color }}
-                
+        Car with id {{ car.counter }} is called <h1> {{ car.name }}</h1>  built in {{ car.year }} has color {{ car.color }}       
     </ul>
+
+  {{form(delete_form)}}
 </div>
+
+
+
+
 {% endblock %}
